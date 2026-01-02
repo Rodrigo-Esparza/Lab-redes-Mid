@@ -17,12 +17,12 @@ Sucursal
 * WAN Matriz - Sucursal
 * Ruteo Dinámico OSPF área 0
 
-Tecnologías utilizadas
-Cisco IOS
-OSPF (Single área)
-VLAN & Trunking 
-Router-on-stick
-DHCP
-ACL Estandar/Extendida
-Packet Tracer
+Tecnologías
+* Cisco IOS
+* OSPF (Single área)
+* VLAN & Trunking 
+* Router-on-stick
+* DHCP
+* ACL Estandar/Extendida
+* Packet Tracer
 
