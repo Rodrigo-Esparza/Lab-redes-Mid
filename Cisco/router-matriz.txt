@@ -1,0 +1,53 @@
+MATRIZ#sh ip rout
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+C       10.0.0.0/30 is directly connected, Serial0/0/0
+L       10.0.0.1/32 is directly connected, Serial0/0/0
+     192.168.10.0/24 is variably subnetted, 2 subnets, 2 masks
+C       192.168.10.0/24 is directly connected, GigabitEthernet0/0.10
+L       192.168.10.1/32 is directly connected, GigabitEthernet0/0.10
+     192.168.20.0/24 is variably subnetted, 2 subnets, 2 masks
+C       192.168.20.0/24 is directly connected, GigabitEthernet0/0.20
+L       192.168.20.1/32 is directly connected, GigabitEthernet0/0.20
+     192.168.30.0/24 is variably subnetted, 2 subnets, 2 masks
+C       192.168.30.0/24 is directly connected, GigabitEthernet0/0.30
+L       192.168.30.1/32 is directly connected, GigabitEthernet0/0.30
+     192.168.40.0/24 is variably subnetted, 2 subnets, 2 masks
+C       192.168.40.0/24 is directly connected, GigabitEthernet0/0.40
+L       192.168.40.1/32 is directly connected, GigabitEthernet0/0.40
+O    192.168.50.0/24 [110/65] via 10.0.0.2, 00:04:32, Serial0/0/0
+-------------------------------------------------------
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+!
+interface GigabitEthernet0/0.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+ ip access-group 120 in
+!
+interface GigabitEthernet0/0.30
+ encapsulation dot1Q 30
+ ip address 192.168.30.1 255.255.255.0
+!
+interface GigabitEthernet0/0.40
+ encapsulation dot1Q 40
+ ip address 192.168.40.1 255.255.255.0
+
+access-list 120 deny ip 192.168.20.0 0.0.0.255 192.168.40.0 0.0.0.255
+access-list 120 permit ip any any
+!
