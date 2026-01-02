@@ -26,3 +26,11 @@ Tecnologías
 * ACL Estandar/Extendida
 * Packet Tracer
 
+Objetivo
+Implementar conectividad entre sedes usando OSPF
+Segmentar tráfico por VLAN 
+Proteger la red de servidores
+Automatizar asignación de IPs
+Simular un entorno empresarial realista
+
+
