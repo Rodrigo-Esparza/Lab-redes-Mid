@@ -27,6 +27,6 @@ Tecnologías
 * Packet Tracer
 
 Objetivo
-Implementar conectividad entre sedes usando OSPF, segmentar tráfico por VLAN , proteger la red de servidore,automatizar asignación de IPs,simular un entorno empresarial realista
+Implementar conectividad entre sedes usando OSPF, segmentar tráfico por VLAN , proteger la red de servidor,automatizar asignación de IPs,simular un entorno empresarial realista
 
 
